@@ -14,7 +14,7 @@ $(function () {
 
         // if the validator does not prevent form submit
         if (!e.isDefaultPrevented()) {
-            var url = "https://andresq4.github.io/form/contact.php";
+            var url = "https://github.com/andresq4/andresq4.github.io/blob/main/form/contact.php";
 
             // POST values in the background the the script URL
             $.ajax({
