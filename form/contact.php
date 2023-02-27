@@ -4,23 +4,23 @@
  */
 
 // an email address that will be in the From field of the email.
-$from = 'Demo contact form <sender@yourdomain.com>';
+$from = 'Demo contact form <andresquintero617@gmail.com>';
 
 // an email address that will receive the email with the output of the form
-$sendTo = 'Demo contact form <reciever@example.com>';
+$sendTo = 'Demo contact form <andresquintero617@gmail.com>';
 
 // subject of the email
-$subject = 'New message from contact form';
+$subject = 'Nuevo mensaje del formulario de contacto';
 
 // form field names and their translations.
 // array variable name => Text to appear in the email
-$fields = array('InputName' => 'Name', 'InputEmail' => 'Email', 'InputSubject' => 'Subject', 'InputMessage' => 'Message'); 
+$fields = array('InputName' => 'Nombre completo', 'InputEmail' => 'Email', 'InputSubject' => 'Asunto', 'InputMessage' => 'Mensaje'); 
 
 // message that will be displayed when everything is OK :)
-$okMessage = 'Your message successfully submitted. Thank you, I will get back to you soon!';
+$okMessage = 'Tu mensaje enviado con éxito. ¡Gracias, me pondré en contacto contigo pronto!';
 
 // If something goes wrong, we will display this message.
-$errorMessage = 'There was an error while submitting the form. Please try again later';
+$errorMessage = 'Hubo un error al enviar el formulario. Por favor, inténtelo de nuevo más tarde';
 
 /*
  *  LET'S DO THE SENDING
@@ -32,9 +32,9 @@ error_reporting(E_ALL & ~E_NOTICE);
 try
 {
 
-    if(count($_POST) == 0) throw new \Exception('Form is empty');
+    if(count($_POST) == 0) throw new \Exception('El formulario esta vacio');
             
-    $emailText = "You have a new message from your contact form\n=============================\n";
+    $emailText = "Tienes un nuevo mensaje desde tu formulario de contacto \n=============================\n";
 
     foreach ($_POST as $key => $value) {
         // If the field exists in the $fields array, include it in the email 
